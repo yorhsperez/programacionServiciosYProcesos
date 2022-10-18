@@ -25,9 +25,12 @@ class HiloSumador3 implements Runnable{
 
 	@Override
 	public void run() {
+		long suma=0;
 		for (int i=n1;i<=n2;i++) {
-			acu.acumular(i);;
+
+			suma+=i;
 		}
+		acu.acumular(suma);
 	}	
 }
 
@@ -46,6 +49,7 @@ public class SumadorConHilos3 {
 			t1.join();
 			t2.join();
 			t3.join();
+
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
