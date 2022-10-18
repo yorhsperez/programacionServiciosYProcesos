@@ -55,5 +55,6 @@ public class SumadorConHilos3 {
 			e.printStackTrace();
 		}
 		System.out.println("Suma:"+suma.getAcumulador());
+		
 	}
 }
