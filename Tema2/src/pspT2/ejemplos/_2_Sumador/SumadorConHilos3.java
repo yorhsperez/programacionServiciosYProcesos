@@ -52,7 +52,7 @@ public class SumadorConHilos3 {
 
         Thread[] hilos = new Thread[MAX_HILOS];
         for (int i = 0; i < MAX_HILOS; i++) {
-            System.out.println("Lanzando hilo desde " + n1 + " a " + (n1 + paso));
+            System.out.println("Lanzando hilo"+ (i+1) +"desde " + n1 + " a " + (n1 + paso));
             hilos[i] = new Thread(new HiloSumador3((int) n1, (int) (n1 + paso), suma));
             hilos[i].setName("hilo" + (i + 1));
             hilos[i].start();
